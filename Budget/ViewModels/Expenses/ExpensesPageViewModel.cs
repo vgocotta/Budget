@@ -16,6 +16,10 @@ public partial class ExpensesPageViewModel : ObservableObject
     private Expense? selectedExpense = null!;
 
     private readonly BudgetContext _context;
+    /// <summary>
+    /// Esta classe representa a ViewModel da ExpensesPage
+    /// </summary>
+    /// <param name="context"></param>
     public ExpensesPageViewModel(BudgetContext context)
     {
         _context = context;

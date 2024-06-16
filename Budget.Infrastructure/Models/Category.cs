@@ -6,7 +6,9 @@ public class Category : AbstractNotify
 {
     private int _id;
     private string _name = null!;
-
+    /// <summary>
+    /// Código da categoria
+    /// </summary>
     public int Id
     {
         get => _id;
@@ -15,6 +17,9 @@ public class Category : AbstractNotify
             SetField(ref _id, value);
         }
     }
+    /// <summary>
+    /// Nome da categoria
+    /// </summary>
     public string Name
     {
         get => _name;

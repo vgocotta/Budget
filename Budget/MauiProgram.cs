@@ -9,9 +9,15 @@ using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 
 namespace Budget;
-
+/// <summary>
+/// Esta classe é o início do programa
+/// </summary>
 public static class MauiProgram
 {
+    /// <summary>
+    /// Método de inicialização do programa
+    /// </summary>
+    /// <returns></returns>
     public static MauiApp CreateMauiApp()
     {
         var builder = MauiApp.CreateBuilder();

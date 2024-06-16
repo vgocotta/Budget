@@ -15,7 +15,9 @@ public class Expense : AbstractNotify
     private double _balance;
     private int _categoryId;
     private Category _category = null!;
-
+    /// <summary>
+    /// Código da despesa
+    /// </summary>
     public int Id
     {
         get => _id;
@@ -24,7 +26,9 @@ public class Expense : AbstractNotify
             SetField(ref _id, value);
         }
     }
-
+    /// <summary>
+    /// Descrição da despesa
+    /// </summary>
     public string Description
     {
         get => _description;
@@ -33,6 +37,9 @@ public class Expense : AbstractNotify
             SetField(ref _description, value);
         }
     }
+    /// <summary>
+    /// Valor da despesa
+    /// </summary>
     public double ExpenseValue
     {
         get => _expenseValue;
@@ -41,6 +48,9 @@ public class Expense : AbstractNotify
             SetField(ref _expenseValue, value);
         }
     }
+    /// <summary>
+    /// Data da despesa
+    /// </summary>
     public DateTime ExpenseDate
     {
         get => _expenseDate;
@@ -49,6 +59,9 @@ public class Expense : AbstractNotify
             SetField(ref _expenseDate, value);
         }
     }
+    /// <summary>
+    /// Indicador de despesa finalizada
+    /// </summary>
     public bool HasEnded
     {
         get => _hasEnded;
@@ -57,6 +70,9 @@ public class Expense : AbstractNotify
             SetField(ref _hasEnded, value);
         }
     }
+    /// <summary>
+    /// Indicador de despesa recorrente
+    /// </summary>
     public bool IsRecurrent
     {
         get => _isRecurrent;
@@ -65,6 +81,9 @@ public class Expense : AbstractNotify
             SetField(ref _isRecurrent, value);
         }
     }
+    /// <summary>
+    /// Número de parcelas
+    /// </summary>
     public int? Installments
     {
         get => _installments;
@@ -73,6 +92,9 @@ public class Expense : AbstractNotify
             SetField(ref _installments, value);
         }
     }
+    /// <summary>
+    /// Valor da parcela
+    /// </summary>
     public double? InstallmentValue
     {
         get => _installmentValue;
@@ -81,6 +103,9 @@ public class Expense : AbstractNotify
             SetField(ref _installmentValue, value);
         }
     }
+    /// <summary>
+    /// Saldo devedor
+    /// </summary>
     public double Balance
     {
         get => _balance;
@@ -89,7 +114,9 @@ public class Expense : AbstractNotify
             SetField(ref _balance, value);
         }
     }
-
+    /// <summary>
+    /// Código da categoria
+    /// </summary>
     public int CategoryId
     {
         get => _categoryId;
@@ -98,6 +125,9 @@ public class Expense : AbstractNotify
             SetField(ref _categoryId, value);
         }
     }
+    /// <summary>
+    /// Esta propriedade representa o objeto do tipo Categoria que está relacionada à despesa
+    /// </summary>
     public virtual Category Category
     {
         get => _category;

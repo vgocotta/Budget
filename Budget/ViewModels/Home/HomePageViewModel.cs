@@ -16,12 +16,18 @@ public partial class HomePageViewModel : ObservableObject
     private ICollection<BudgetValue> budgets = [];
 
     private readonly BudgetContext _context;
+    /// <summary>
+    /// Construtor da classe que representa a ViewModel para a HomePage
+    /// </summary>
+    /// <param name="context"></param>
     public HomePageViewModel(BudgetContext context)
     {
         SelectedDate = DateTime.Now;
         _context = context;
     }
-
+    /// <summary>
+    /// Representa o valor total de despesas do mês
+    /// </summary>
     public double? Total => Budgets?.Sum(x => x.Valor);
 
     private async Task SetBudgetList()

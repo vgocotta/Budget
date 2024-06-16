@@ -18,6 +18,10 @@ public partial class CategoriesPageViewModel : ObservableObject
     private string newCategoryName = null!;
 
     private readonly BudgetContext _context;
+    /// <summary>
+    /// Construtor da classe de ViewModel para a CategoriesPage
+    /// </summary>
+    /// <param name="context"></param>
     public CategoriesPageViewModel(BudgetContext context)
     {
         _context = context;
