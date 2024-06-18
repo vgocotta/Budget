@@ -40,7 +40,7 @@ public partial class ExpensesPageViewModel : ObservableObject
     {
         await _context.Expenses.Where(x => !x.HasEnded).LoadAsync();
         Expenses = _context.Expenses.Local.ToObservableCollection();
-        SelectedExpense = null;
+        //SelectedExpense = null;
     }
 
     [RelayCommand]
@@ -75,6 +75,6 @@ public partial class ExpensesPageViewModel : ObservableObject
         {
             await DeleteSelected();
         }
-        SelectedExpense = null;
+        //SelectedExpense = null;
     }
 }

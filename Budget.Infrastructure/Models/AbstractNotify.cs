@@ -7,8 +7,14 @@ namespace Budget.Infrastructure.Models;
 /// </summary>
 public abstract class AbstractNotify : INotifyPropertyChanged
 {
+    /// <summary>
+    /// Evento que notifica alteração de uma propriedade
+    /// </summary>
     public event PropertyChangedEventHandler? PropertyChanged;
-
+    /// <summary>
+    /// Este método invoca o evento de notificação de alteração de propriedade
+    /// </summary>
+    /// <param name="propertyName"></param>
     protected void OnPropertyChanged([CallerMemberName] string propertyName = null!) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     /// <summary>
     /// Este método realiza a alteração e a notificação da propriedade de forma genérica

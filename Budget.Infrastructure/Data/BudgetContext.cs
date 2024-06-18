@@ -32,6 +32,6 @@ public class BudgetContext : DbContext
         var databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"Budget App");
         Directory.CreateDirectory(databasePath);
 
-        optionsBuilder.UseSqlite($"Filename={Path.Combine(databasePath,"budget.db")}");
+        optionsBuilder.UseSqlite($"Filename={Path.Combine(databasePath,"budget-test.db")}");
     }
 }
